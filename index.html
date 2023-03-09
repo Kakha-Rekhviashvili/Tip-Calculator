@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputs-section section">
+        <div class="header">
+          <h1>Bill</h1>
+          <p id="err_bill"></p>
+        </div>
+        <input
+          type="text"
+          id="bill"
+          class="usd icon"
+          oninput="initialise_Bill()"
+        />
+
+        <div class="percentage-parent-div">
+          <div class="header">
+            <h1>Select Tip %</h1>
+            <p id="err_percent"></p>
+          </div>
+          <div class="percentage-div">
+            <button value="5" onclick="initialise_Percent(this.value)">
+              5%
+            </button>
+            <button value="10" onclick="initialise_Percent(this.value)">
+              10%
+            </button>
+            <button value="15" onclick="initialise_Percent(this.value)">
+              15%
+            </button>
+            <button value="20" onclick="initialise_Percent(this.value)">
+              20%
+            </button>
+            <button value="25" onclick="initialise_Percent(this.value)">
+              25%
+            </button>
+            <input
+              type="text"
+              id="percent"
+              placeholder="Custom"
+              oninput="initialise_Percent(this.value)"
+            />
+          </div>
+        </div>
+
+        <div class="header">
+          <h1>Number of People</h1>
+          <p id="err_person"></p>
+        </div>
+
+        <input
+          type="text"
+          id="person"
+          class="human icon"
+          oninput="initialise_Person()"
+        />
+      </div>
+
+      <div class="result-section section">
+        <div class="trio">
+          <div class="duo">
+            <h1>Tip Amount</h1>
+            <p>/ person</p>
+          </div>
+          <p id="tip_amount" class="result"></p>
+        </div>
+
+        <div class="trio">
+          <div class="duo">
+            <h1>Total</h1>
+            <p>/ person</p>
+          </div>
+          <p id="per-person" class="result"></p>
+        </div>
+
+        <button id="reset" onclick="reset()">Reset!</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="main.js"></script>
