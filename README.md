@@ -1,3 +1,7 @@
+Javascript challange
+
+
+
 Live Site URL:  https://kakha-rekhviashvili.github.io/Tip-Calculator/
 
 
